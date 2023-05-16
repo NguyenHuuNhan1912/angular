@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Cart } from 'src/app/models/cart.model';
 import { CartService } from 'src/app/services/cart.service';
 
 @Component({
@@ -9,14 +8,13 @@ import { CartService } from 'src/app/services/cart.service';
   providers: [CartService]
 })
 export class CartComponent {
-  cart:any = Cart;
-  cartMain: any[] = [];
+  cart:any = [];
   constructor(private CartService: CartService) {
 
   }
   handleCheck() {
     
-    console.log(this.cartMain);
+    console.log(this.cart);
   }
   ngOnInit() {
     this.getCart();
@@ -24,7 +22,8 @@ export class CartComponent {
   getCart() {
     this.CartService.getInforCart().subscribe(cart => {
       this.cart = cart;
-      this.cartMain = this.cart.results;
+    },error => {
+      console.log(error);
     });
     
   }
