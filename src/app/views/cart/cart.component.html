@@ -2,9 +2,16 @@
     <h1>This is cart</h1>
     <button (click)="handleCheck()">Click</button>
     <ul>
-        <li *ngFor="let item of cart">
+        <li *ngFor="let item of cartMain">
             <h1>{{item.name}}</h1>
             
         </li>
     </ul>
+    <button (click)="handleDeleteCart()">Delete</button>
+    <button (click)="handleCreateCart()">Create</button>
+    <button (click)="handleUpdateCart()">Update</button>
+    <button (click)="handleGetOneCart()">GetOneCart</button>
+    <button (click)="handleFilCart()">Fil</button>
+
+
 </main>
