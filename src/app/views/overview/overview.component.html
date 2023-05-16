@@ -1,0 +1,19 @@
+<main class="overview">
+    <h1>This is overview</h1>
+    <app-test 
+        [listStaff]="listStaff" 
+        (pushData)="getTicket($event)"
+        (pushListTicket) = 'getListTicket($event)'
+    >
+    </app-test>
+    <input 
+        type="text"
+        name="ticket"
+        [(ngModel)]="ticket"
+    >
+    <ul>
+        <li *ngFor="let item of listTicket">
+            {{item}}
+        </li>
+    </ul>
+</main>

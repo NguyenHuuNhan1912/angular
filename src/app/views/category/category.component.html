@@ -1,0 +1,11 @@
+<main class="category">
+    <h1>This is category</h1>
+    <button (click)="handleCheck()">Check product</button>
+    <ul>
+        <li *ngFor="let item of products">
+            {{item.name}}
+            {{item.quantity}}
+            {{item.price}}
+        </li>
+    </ul>
+</main>

@@ -1,0 +1,23 @@
+<main class="dashboard-layout">
+    <header class="header">
+        <h1>This is header dashboard layout</h1>
+    </header>
+    <section class="content">
+        <aside class="aside">
+            <ul>
+                <li>
+                    <a routerLink="/dashboard">Overview</a>
+                </li>
+                <li>
+                    <a routerLink="/dashboard/product">Product</a>
+                </li>
+                <li>
+                    <a routerLink="/dashboard/category">Category</a>
+                </li>
+            </ul>
+        </aside>
+        <main class="main">
+            <router-outlet></router-outlet>
+        </main>
+    </section>
+</main>

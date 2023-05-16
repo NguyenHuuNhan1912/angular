@@ -1,0 +1,19 @@
+.nav-header {
+    padding: 20px;
+    background-color: rgb(31, 28, 28);
+}
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+li {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+a {
+    color: inherit;
+}

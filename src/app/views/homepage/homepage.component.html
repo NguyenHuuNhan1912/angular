@@ -1,0 +1,52 @@
+<main class="homepage">
+    <section class="login">
+        <form action="#" class="form form--signup" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <div class="form-heading">
+                <h1 class="form-heading__title">Đăng kí</h1>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Nhập tên tài khoản (*)" name="username" formControlName="username">
+                <div class="message" *ngIf="(username.touched || submitted) && username.invalid">
+                    <p class="message__errors" *ngIf="username.errors?.required">Tên tài khoản không thể để trống</p>
+                    <p class="message__errors" *ngIf="username.errors?.minlength">Tên tài khoản phải có ít nhất 5 kí tự
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="email" placeholder="Nhập email (*)" name="email" formControlName="email">
+                <div class="message" *ngIf="(email.touched || submitted) && email.invalid">
+                    <p class="message__errors" *ngIf="email.errors?.required">Email không được để trống</p>
+                    <p class="message__errors" *ngIf="email.errors?.pattern">Email không đúng định dạng</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" placeholder="Nhập số điện thoại (*)" name="numberphone"
+                    formControlName="numberphone">
+                <div class="message" *ngIf="(numberphone.touched || submitted) && numberphone.invalid">
+                    <p class="message__errors" *ngIf="numberphone.errors?.required">Số điện thoại không được để trống
+                    </p>
+                    <p class="message__errors" *ngIf="numberphone.errors?.pattern">Số điện thoại không đúng định dạng
+                    </p>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="password" name="password" placeholder="Nhập mật khẩu (*)" formControlName="password">
+                <div class="message" *ngIf="(password.touched || submitted) && password.invalid">
+                    <p class="message__errors" *ngIf="password.errors?.required">Mật khẩu không được để trống</p>
+                    <p class="message__errors" *ngIf="password.errors?.pattern">Mật khẩu không đúng định dạng</p>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="password" name="confirmPassword" placeholder="Nhập lại mật khẩu (*)"
+                    formControlName="confirmPassword" (ngModelChange)="handleChange()">
+                <div class="message" *ngIf="(confirmPassword.touched || submitted) && confirmPassword.invalid">
+                    <p class="message__errors" *ngIf="confirmPassword.errors?.required">Mật khẩu nhập lại không được để trống</p>
+                </div>
+               
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Đăng kí">
+            </div>
+        </form>
+    </section>
+</main>

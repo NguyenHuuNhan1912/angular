@@ -1,0 +1,47 @@
+
+.form--signup {
+  margin: 50px 450px 50px;
+  border: 1px solid grey;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form-group  {
+  margin-top: 20px;
+}
+.form-heading__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 30px;
+  padding: 0;
+  color: green;
+}
+input {
+  width: 100%;
+  border: 1px solid green;
+  outline: none;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 5px;
+
+}
+
+input[type='submit'] {
+  background-color: rgb(8, 32, 8);
+  color: white;
+  text-transform: uppercase;
+  transition: all 0.4s linear;
+  cursor: pointer;
+}
+
+input[type='submit']:hover {
+  background-color: green;
+}
+
+.message__errors  {
+  color: red;
+  font-size: 17px;
+  margin-top: 10px;
+}
+

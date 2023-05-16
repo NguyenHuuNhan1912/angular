@@ -1,0 +1,20 @@
+<main class="test">
+    <h1>Test</h1>
+    <section class="listStaffContainer">
+        <section class="listStaffItem" *ngFor="let item of listStaff">
+            <h1>{{item.name}}</h1>
+            <h1>{{item.salary}}</h1>
+            <h1>{{item.position}}</h1>
+        </section>
+    </section>
+    <input 
+        type="text"
+        name="shareData"
+        placeholder="Share data children to parent"
+        style="width: 250px;" 
+        [(ngModel)]="keyTicket"
+    > 
+    <button (click)="handleSend()">Send</button>
+    <button (click)="handleSendListTicket()">Send List Ticket</button>
+    
+</main>

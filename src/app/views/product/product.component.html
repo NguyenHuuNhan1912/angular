@@ -1,0 +1,44 @@
+<main class="product">
+    <h1>This is product</h1>
+    <form action="#" class="form" [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <input 
+                [required]="checkUsername"
+                formControlName="username"
+                type="text"
+                placeholder="Read name"
+                name="username"
+                (blur)="handleBlurUsername($event)"
+            >
+            <p 
+                *ngIf="formLogin.controls.username.invalid"
+                style="color: red;"
+            >
+                Tên tài khoản không thể để trống
+            </p>
+        </div>
+        <div class="form-group">
+            <input 
+                [required]="checkPassword"
+                formControlName="password"
+                type="text"
+                placeholder="Read password"
+                name="password"
+                (blur)="handleBlurPassword($event)"
+            >
+            <p 
+                *ngIf="formLogin.controls.password.invalid"
+                style="color: red;"
+            >
+                Mật khẩu không thể để trống
+            </p>
+        </div>
+        <div class="form-group">
+            <input 
+                type="submit" 
+                value="Send"
+             
+            >
+        </div>
+    </form>
+</main>

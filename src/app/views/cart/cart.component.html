@@ -1,0 +1,10 @@
+<main class="cart">
+    <h1>This is cart</h1>
+    <button (click)="handleCheck()">Click</button>
+    <ul>
+        <li *ngFor="let item of cartMain">
+            <h1>{{item.name}}</h1>
+            
+        </li>
+    </ul>
+</main>
